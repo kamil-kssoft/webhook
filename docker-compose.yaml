@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  webhook-service:
+    image: kamilkssoft/webhook:latest
+    build: .
+    ports:
+      - "7012:5000"
+    volumes:
+      - ./logs:/logs
+
+volumes:
+  logs:
